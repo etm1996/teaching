@@ -1,6 +1,6 @@
 # Identificação
 
-* Página do repositório do trabalho ([link GitHub](TODO)) 
+* Página do repositório do trabalho ([https://github.com/etm1996/teaching/tree/master/2018.1-IAC/AB2.1-TP](TODO)) 
 
 * Discente 1
 	* Nome: TODO
