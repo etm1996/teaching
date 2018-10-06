@@ -1,6 +1,6 @@
 # Identificação
 
-* Página do repositório do trabalho (<a href="https://github.com/etm1996/teaching/tree/master/2018.1-IAC/AB2.1-TP">GitHub</a>) 
+* Página do repositório do trabalho (<a href="https://github.com/etm1996/teaching/tree/master/2018.1-IAC/AB2.1-TP">GitHub</a>)
 
 * Discente 1
 	* Nome: Eduardo Tenório Monteiro
@@ -8,17 +8,17 @@
 * Discente 2
 	* Nome: Luis Otávio S. de Oliveira
 	* Matrícula: 17110133
-**Obs.: Dividir igualmente as notas.**
-	
+* **Obs.: Dividir igualmente as notas.**
+
 # Métodos de compilação e execução
  * Para compilação:
- **gcc main.c -o main**
+    * **gcc main.c -o main**
 
  * Para execução do código com utilização intensa da UCP:
- **./main ucp**
+    * **./main ucp**
  * Para execução do código com utilização intensa da UCP e da memória:
- **./main ucp-mem** - Executará o programa com utilização intensa da UCP
- 
+    * **./main ucp-mem** - Executará o programa com utilização intensa da UCP
+
 # Resultados
 
 * TODO: Plotar um gráfico com os resultados das medições das seguintes métricas utilizadas para avaliar o comportamento do **processo filho**:
