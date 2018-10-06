@@ -38,7 +38,7 @@ Ou seja, o processo filho é uma cópia do pai, exatamente igual. A função ret
 
 ## Utilização intensa da UCP
 
-Utilizando **"if(strcmp(argv[1], "ucp") == 0)"** definimos que para entrar nesse processo o usuário deve digitar "ucp" logo após o nome do programa. Analisando o gráfico de uso intenso da UCP, percebe-se que no primeiro segundo a utilização do processador já beira os 102%, o que não era esperado, pois achava-se que seria uma elevação mais linear. Para conseguir a soma do uso de todos os núcleos do processador utilizamos o comando "ps -p ", pid, " -o %cpu | grep -v %CPU". A partir do quarto segundo a porcentagem de utilização da UCP diminuiu e foi aumentando vagarosamente, como tínhamos esperado.
+Utilizando **"if(strcmp(argv[1], "ucp") == 0)"** definimos que para entrar nesse processo o usuário deve digitar "ucp" logo após o nome do programa. Analisando o gráfico de uso intenso da UCP, percebe-se que no primeiro segundo a utilização do processador já beira os 102%, o que não era esperado, pois achava-se que seria uma elevação mais linear. Para conseguir a soma do uso de todos os núcleos do processador utilizamos o comando "ps -p ", pid, " -o %cpu | grep -v %CPU". A partir do quarto segundo a porcentagem de utilização da UCP diminuiu e foi aumentando vagarosamente, como tínhamos esperado. Vale ressaltar que quando o comando "ucp" foi usado , a utilização de UCP foi mais constante na faixa dos 102%, caindo para no máximo 95%, enquanto no comando "ucp-mem" houve-se uma queda de uso da UCP para até 80% como explicado acima, o que leva a crer que a alocação de mémoria permite que o uso de ucp nesse caso seja menor.
 
 ## Utilização intensa da UCP e memória
 
