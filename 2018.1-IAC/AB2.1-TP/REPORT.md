@@ -21,12 +21,12 @@
 
 # Resultados
 
-Gráfico de consumo intenso da UCP (%):
+Gráfico de uso intenso da UCP (%):
 
 ![alt text](https://github.com/etm1996/teaching/blob/master/2018.1-IAC/AB2.1-TP/src/cpu.jpg "Gráfico de consumo da UCP")
 
 
-Gráfico de consumo de memória (KB):
+Gráfico de uso de memória (KB):
 
   <img src="src/memoria.jpg">
 
