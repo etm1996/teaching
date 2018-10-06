@@ -23,11 +23,11 @@
 
 Gráfico de consumo intenso da UCP (%):
 
-![alt text](https://github.com/etm1996/teaching/tree/master/2018.1-IAC/AB2.1-TP/src/cpu.jpg "Gráfico de consumo da UCP")
+	<img src="images/ucp.jpg">
 
 Gráfico de consumo de memória (KB):
 
-![alt text](https://github.com/etm1996/teaching/tree/master/2018.1-IAC/AB2.1-TP/src/memoria.jpg "Gráfico de consumo de memória")
+ 	<img src="src/memoria.jpg"> 
 
 
 # Discussão
