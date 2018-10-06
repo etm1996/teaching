@@ -21,8 +21,13 @@
 
 # Resultados
 
-## Utilização intensa da UCP via "./main ucp"
+Gráfico de consumo intenso da UCP (%):
 
+![alt text](https://github.com/etm1996/teaching/tree/master/2018.1-IAC/AB2.1-TP/src/cpu.jpg "Gráfico de consumo da UCP")
+
+Gráfico de consumo de memória (KB):
+
+![alt text](https://github.com/etm1996/teaching/tree/master/2018.1-IAC/AB2.1-TP/src/memoria.jpg "Gráfico de consumo de memória")
 
 
 # Discussão
