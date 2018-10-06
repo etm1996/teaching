@@ -1,33 +1,62 @@
-#include <unistd.h> 
-#include <sys/types.h> 
-#include <sys/wait.h> 
-#include <stdio.h> 
+#include <stdio.h>
 #include <stdlib.h>
+#include <string.h>
+#include <sys/types.h>
+#include <sys/wait.h>
+#include <time.h>
+#include <unistd.h>
 
 int main (int argc, char *argv[], char *envp[]) {
 
-int pid ; /* identificador de processo */
+int i;
+int pid = fork(); /*Process ID and creates a children process using fork()*/
+char commandcpu[100]; /*array for store the command string for cpu usage*/
+char commandmem[100]; /*array for store the command string for memory usage*/
+clock_t initialtime,finaltime;
 
-pid = fork () ; /* replicacção do processo */
 
-if ( pid < 0 ) { /* se o fork não funcionou */
+
+if ( pid < 0 ) { /*Fork went wrong, and process failed*/
 	perror ("Erro: ") ;
-	exit (-1) ; /* encerra o processo com código de erro -1 */ 
+	exit (-1) ;
 }
-else if( pid > 0 ) /* se sou o processo pai*/ 
+else if( pid > 0 ) /*Father(Parent) process*/
 {
-	//TODO guarde a cada segundo o consumo de memória (em Kilobytes) e CPU (em porcentagem) do processo filho
-	//TODO após 10 segundos de execução, mate o proceso filho
+	sprintf(commandcpu, "%s%d%s", "ps -p ", pid, " -o %cpu | grep -v %CPU");/*Command string for cpu usage*/
+    sprintf(commandmem, "%s%d%s", "pmap -x ", pid," | grep total | awk '{print $3}'");/*Command string for memory usage*/
+     for(i = 0; i < 10; i++) {
+     		printf("PID: %d\n", pid);
+           	printf("Current CPU(%%) Usage:\n");
+            system(commandcpu);
+            printf("Total memory usage(KB)");
+            system(commandmem);
+            printf("---------\n");
+            sleep(1);
+        }
+        kill(pid, SIGKILL);/*Kill the process*/
 }
-else /* senão, sou o processo filho (pid == 0) */ 
+else /*Child process*/
 {
-	//TODO se argv[1] for igual a 'cpu', executar código com utilização intensa da UCP
-	//TODO se argv[1] for igual a 'cpu-mem', executar código com utilização intensa da UCP e da memória
+	if(strcmp(argv[1], "ucp") == 0) { /*Uses CPU*/
+		    for(;;) {
+		    }
+		}
+         if(strcmp(argv[1], "ucp-mem") == 0) {/*Uses CPU & Memory*/
+        double pasttime; /*For clocking purposes*/
+        initialtime = clock();/*Starting time*/
+        for (;;) {
+        finaltime = clock();/*Finishing time*/
+        pasttime = (double)(finaltime - initialtime) / CLOCKS_PER_SEC; /*Calculate how much time passed*/
+        if (pasttime <= 10){/*Works for 10 seconds*/
+              malloc(10*sizeof(int));
+            }
+
+            }
+		}
 
 }
-perror ("Erro: ") ; /* execve nãoo funcionou */
 
 printf ("Tchau !\n") ;
-exit(0) ; /* encerra o processo com sucesso (código 0) */ 
+exit(0) ; /*End of process*/
 
 }
