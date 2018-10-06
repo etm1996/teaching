@@ -12,7 +12,7 @@
 	* Distribuição da nota (%): 40%.
 * Discente 3
 	* Nome: Hugo Victor da Silva Lima
-	* Matrícula: 17110133
+	* Matrícula: 16210084
 	* Distribuição da nota (%): 20%.
 * **Obs.: As notas foram decididas e todos os participantes estão de acordo.**
 
